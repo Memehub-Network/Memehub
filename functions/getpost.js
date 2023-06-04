@@ -57,9 +57,9 @@ exports = async function(payload, response) {
    }
    
    return {
-     page:pageQ,
+     //page:pageQ,
      results:results,
-     total_results:pages
+     //total_results:pages
    };
   
 };
