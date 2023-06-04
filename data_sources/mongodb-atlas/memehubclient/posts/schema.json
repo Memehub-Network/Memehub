@@ -1,0 +1,29 @@
+{
+    "properties": {
+        "Avatar": {
+            "bsonType": "string"
+        },
+        "Caption": {
+            "bsonType": "string"
+        },
+        "Likes": {
+            "bsonType": "int"
+        },
+        "Post": {
+            "bsonType": "string"
+        },
+        "Username": {
+            "bsonType": "string"
+        },
+        "Verified": {
+            "bsonType": "bool"
+        },
+        "_id": {
+            "bsonType": "objectId"
+        },
+        "createTime": {
+            "bsonType": "string"
+        }
+    },
+    "title": "post"
+}

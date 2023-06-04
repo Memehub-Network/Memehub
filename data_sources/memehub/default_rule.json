@@ -1,0 +1,18 @@
+{
+    "id": "643d1f8912de8b2b5f44e8a0",
+    "roles": [
+        {
+            "name": "readAndWriteAll",
+            "apply_when": {},
+            "document_filters": {
+                "write": {},
+                "read": {}
+            },
+            "read": true,
+            "write": true,
+            "insert": true,
+            "delete": true,
+            "search": true
+        }
+    ]
+}
