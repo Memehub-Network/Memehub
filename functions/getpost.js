@@ -44,9 +44,9 @@ exports = async function(payload, response) {
       
        if(Array.isArray(posts) && !posts.length){
          if(pages>1){
-           results = "End of results";
+           results = "The end";
          }else
-         results = "Oops! Nothing";
+         results = "No Results!";
       
        }else{
          results = posts;
