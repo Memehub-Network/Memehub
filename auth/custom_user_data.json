@@ -1,5 +1,5 @@
 {
-    "enabled": false,
+    "enabled": true,
     "mongo_service_name": "memehub",
     "database_name": "memehubauth",
     "collection_name": "users",
