@@ -1,8 +1,8 @@
 {
-    "app_id": "memehub-network",
+    "app_id": "memehub-gjgyo",
     "config_version": 20210101,
     "name": "Memehub",
     "location": "US-VA",
     "provider_region": "aws-us-east-1",
-    "deployment_model": "GLOBAL"
+    "deployment_model": "LOCAL"
 }
