@@ -44,7 +44,7 @@
         "return_type": "JSON"
     },
     {
-        "route": "/user/stories",
+        "route": "/feed/stories",
         "http_method": "GET",
         "function_name": "getStories",
         "validation_method": "NO_VALIDATION",
