@@ -2,7 +2,7 @@
     {
         "route": "/home/feed",
         "http_method": "GET",
-        "function_name": "homeFeeder",
+        "function_name": "getPost",
         "validation_method": "NO_VALIDATION",
         "respond_result": true,
         "fetch_custom_user_data": false,
