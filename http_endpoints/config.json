@@ -1,6 +1,6 @@
 [
     {
-        "route": "/home/feed",
+        "route": "/home/feed/unknown",
         "http_method": "GET",
         "function_name": "getPost",
         "validation_method": "NO_VALIDATION",
