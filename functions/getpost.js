@@ -1,5 +1,4 @@
 exports = async function(payload, response) {
-//exports = async function(request, response) {
   
   if(payload.body === undefined) {
       throw new Error(`Request body was not defined.`)
