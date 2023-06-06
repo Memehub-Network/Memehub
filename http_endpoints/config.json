@@ -2,7 +2,7 @@
     {
         "route": "/home/feed/unknown",
         "http_method": "GET",
-        "function_name": "getPost",
+        "function_name": "getpost",
         "validation_method": "NO_VALIDATION",
         "respond_result": true,
         "fetch_custom_user_data": false,
