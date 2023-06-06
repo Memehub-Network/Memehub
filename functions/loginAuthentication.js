@@ -1,3 +1,3 @@
 
-export(){
+exports = async function(arg){
 }
