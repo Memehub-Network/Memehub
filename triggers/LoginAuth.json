@@ -1,14 +1,14 @@
 {
-    "id": "647fad84381ab67df9cb2602",
+    "id": "647faf49d2d372a5a18fe1ce",
     "name": "LoginAuth",
     "type": "AUTHENTICATION",
     "config": {
         "operation_type": "LOGIN",
         "providers": [
             "api-key",
+            "local-userpass",
             "custom-token",
-            "custom-function",
-            "local-userpass"
+            "custom-function"
         ]
     },
     "disabled": false,

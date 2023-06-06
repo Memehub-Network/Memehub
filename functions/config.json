@@ -1,5 +1,10 @@
 [
     {
+        "name": "deleteNot",
+        "private": false,
+        "run_as_system": true
+    },
+    {
         "name": "getNotifications",
         "private": false,
         "run_as_system": true
@@ -32,11 +37,6 @@
     },
     {
         "name": "addNotification",
-        "private": false,
-        "run_as_system": true
-    },
-    {
-        "name": "deleteNot",
         "private": false,
         "run_as_system": true
     }
