@@ -30,7 +30,8 @@ const admin = initializeApp({
 });
 
 
-console.log(admin.name); 
+console.log(admin.name);
+return admin.name;
 
 /*
 
