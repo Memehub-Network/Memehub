@@ -1,6 +1,8 @@
 exports = async function(){
 
-exports = async function(email, password) {
+//exports = async function(email, password) {
+let email = "lilmpesa@gmail.com";
+let password = "atsiaya#";
   const admin = context.services.get('firebase-admin');
   const auth = admin.auth();
 
@@ -13,7 +15,7 @@ const er = "Authentication failed!";
 return er;
     throw new Error('Authentication failed');
   }
-};
+//};
 
 //const result = await function("lilmpesa@gmail.com", "atsiaya#");
 
