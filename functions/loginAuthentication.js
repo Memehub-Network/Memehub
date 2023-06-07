@@ -1,9 +1,10 @@
 
 exports = async function(payload){
 
-    const firebase = require('firebase/app');
+   // const firebase = require('firebase/app');
     //require('firebase/auth');
 
+/*
     const firebaseConfig = {
       apiKey: "AIzaSyAKBrTeGmSSyj6Rg37surQRshyfRn8t8dQ",
       authDomain: "memehub-server.firebaseapp.com",
@@ -26,14 +27,14 @@ exports = async function(payload){
   
       return { uid, email: userEmail, displayName };
 //};
+*/
 
 
 
 
 
-
-    //const user = "lil.mpesa is the admin!";
-    //return user;
+    const user = "lil.mpesa is the admin!";
+    return user;
 
 }
 /*
