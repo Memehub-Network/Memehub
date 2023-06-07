@@ -9,6 +9,8 @@ exports = async function(email, password) {
     const { uid, email: userEmail, displayName } = userRecord;
     return { uid, email: userEmail, displayName };
   } catch (error) {
+const er = "Authentication failed!";
+return er;
     throw new Error('Authentication failed');
   }
 };
@@ -16,7 +18,7 @@ exports = async function(email, password) {
 //const result = await function("lilmpesa@gmail.com", "atsiaya#");
 
 
-return result;
+//return result;
 
 
 
