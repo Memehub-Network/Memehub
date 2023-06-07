@@ -13,7 +13,7 @@ exports = async function(email, password) {
   }
 };
 
-const result = await function("lilmpesa@gmail.com", "atsiaya#");
+//const result = await function("lilmpesa@gmail.com", "atsiaya#");
 
 
 return result;
