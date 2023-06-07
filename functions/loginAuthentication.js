@@ -17,7 +17,7 @@ exports = async function(payload){
 
     firebase.initializeApp(firebaseConfig);
 
-    exports = async function(/*email, password*/) {
+    //exports = async function(/*email, password*/) {
      let email = "lilmpesa@gmail.com";
      let password = "atsiaya#";
 
@@ -25,7 +25,7 @@ exports = async function(payload){
       const { uid, email: userEmail, displayName } = response.user;
   
       return { uid, email: userEmail, displayName };
-};
+//};
 
 
 
