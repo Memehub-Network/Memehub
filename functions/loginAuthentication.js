@@ -4,13 +4,13 @@ exports = async function(){
 let email = "lilmpesa@gmail.com";
 let password = "atsiaya#";
 
-const admin = require('firebase-admin');
+var admin = require("firebase-admin");
 
-// Initialize Firebase Admin SDK with your Firebase project credentials
-const serviceAccount = require('./google-services (2).json');
+var serviceAccount = require("path/to/serviceAccountKey.json");
+
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: 'https://memehub-server-default-rtdb.firebaseio.com'
+  databaseURL: "https://memehub-server-default-rtdb.firebaseio.com"
 });
 
 
