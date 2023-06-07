@@ -1,6 +1,7 @@
 exports = async function(){
 
-//exports = async function(email, password) {
+const path = require('path');
+
 let email = "lilmpesa@gmail.com";
 let password = "atsiaya#";
 
@@ -8,7 +9,7 @@ var admin = require("firebase-admin");
 
 //var serviceAccount = require("path/to/serviceAccountKey.json");
 
-var serviceAccount = load("/data/db/scripts/serviceAccountKey.json")
+var serviceAccount = '/data/db/scripts/serviceAccountKey.json';
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
