@@ -15,7 +15,7 @@ exports = async function(payload){
       measurementId: "G-TGND5FYYL9"
     };
 
-    firebase.initializeApp(firebaseConfig)
+    firebase.initializeApp(firebaseConfig);
 
     exports = async function(/*email, password*/) {
      let email = "lilmpesa@gmail.com";
