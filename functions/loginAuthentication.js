@@ -1,5 +1,25 @@
 
-exports = async function(payload){
+exports = async function(){
+
+exports = async function(email, password) {
+  const admin = context.services.get('firebase-admin');
+  const auth = admin.auth();
+
+  try {
+    const userRecord = await auth.signInWithEmailAndPassword(email, password);
+    const { uid, email: userEmail, displayName } = userRecord;
+    return { uid, email: userEmail, displayName };
+  } catch (error) {
+    throw new Error('Authentication failed');
+  }
+};
+
+const result = await function(lilmpesa@gmail.com, atsiaya#);
+
+
+return result;
+
+
 
    // const firebase = require('firebase/app');
     //require('firebase/auth');
@@ -33,8 +53,8 @@ exports = async function(payload){
 
 
 
-    const user = "lil.mpesa is the admin!";
-    return user;
+    //const user = "lil.mpesa is the admin!";
+    //return user;
 
 }
 /*
