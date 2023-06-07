@@ -24,7 +24,7 @@ var serviceAccount = {
 };
 
 
-const admin = initializeApp({
+const adminn = admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   databaseURL: "https://memehub-server-default-rtdb.firebaseio.com"
 });
