@@ -1,8 +1,9 @@
 
-exports = async function(arg){
-    const user = "lil.mpesa";
+exports = async function(payload){
+    const user = "lil.mpesa is the admin!";
+    return user;
 }
-
+/*
 exports = async function (payload) {
   // 1. Parse the `payload` object, which holds data from the
   //    FunctionCredential sent by the SDK.
@@ -31,3 +32,4 @@ exports = async function (payload) {
   //    !!! This is NOT the user's internal account ID for your app !!!
   return user.id;
 };
+*/
