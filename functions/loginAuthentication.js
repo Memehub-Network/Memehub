@@ -2,7 +2,7 @@
 exports = async function(payload){
 
     const firebase = require('firebase/app');
-    require('firebase/auth');
+    //require('firebase/auth');
 
     const firebaseConfig = {
       apiKey: "AIzaSyAKBrTeGmSSyj6Rg37surQRshyfRn8t8dQ",
