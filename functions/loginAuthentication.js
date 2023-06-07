@@ -1,7 +1,40 @@
 
 exports = async function(payload){
-    const user = "lil.mpesa is the admin!";
-    return user;
+
+    const firebase = require('firebase/app');
+    require('firebase/auth');
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAKBrTeGmSSyj6Rg37surQRshyfRn8t8dQ",
+      authDomain: "memehub-server.firebaseapp.com",
+      databaseURL: "https://memehub-server-default-rtdb.firebaseio.com",
+      projectId: "memehub-server",
+      storageBucket: "memehub-server.appspot.com",
+      messagingSenderId: "696200336899",
+      appId: "1:696200336899:web:6401e35efad652b677a036",
+      measurementId: "G-TGND5FYYL9"
+    };
+
+    firebase.initializeApp(firebaseConfig)
+
+    exports = async function(/*email, password*/) {
+     let email = "lilmpesa@gmail.com";
+     let password = "atsiaya#";
+
+      const response = await firebase.auth().signInWithEmailAndPassword(email, password);
+      const { uid, email: userEmail, displayName } = response.user;
+  
+      return { uid, email: userEmail, displayName };
+};
+
+
+
+
+
+
+    //const user = "lil.mpesa is the admin!";
+    //return user;
+
 }
 /*
 exports = async function (payload) {
