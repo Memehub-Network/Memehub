@@ -5,6 +5,11 @@
         "run_as_system": true
     },
     {
+         "name":"systemAuth",
+"private":false,
+"run_as_system":true
+},
+    {
         "name": "getStories",
         "private": false,
         "run_as_system": true,
