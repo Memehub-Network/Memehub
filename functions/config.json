@@ -5,6 +5,11 @@
         "run_as_system": true
     },
     {
+        "name": "googleAuth",
+        "private": false,
+        "run_as_system": true
+    },
+    {
         "name": "loginAuthentication",
         "private": false,
         "run_as_system": true
