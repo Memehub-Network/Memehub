@@ -1,6 +1,13 @@
 exports = async function(req, res) {
-  const email = req.body.email;
-  const password = req.body.password;
+
+  if(req.body === undefined) { 
+       throw new Error(`Request body was not defined.`) 
+   }
+  const model = JSON.parse(payload.body.text());
+
+  const email = model.email;
+const password = model.password;
+  //const password = req.body.password;
 
   try {
     const result = await context.functions.execute("Function_0", email, password);
