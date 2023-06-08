@@ -9,14 +9,8 @@ exports = async function(req, res) {
 const password = model.password;
 const username = model.username;
 
-if(username==null){
-    email = model.email;
-}else{
-    email = model.username;
-}
-
   try {
-    const result = await context.functions.execute("Function_0", email, password);
+    const result = await context.functions.execute("Function_0", username, email, password);
     if (result) {
       res.setStatusCode(201); 
        // tip: You can also use EJSON.stringify instead of JSON.stringify. 
