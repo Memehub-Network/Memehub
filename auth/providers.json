@@ -16,7 +16,9 @@
         "name": "custom-token",
         "type": "custom-token",
         "config": {
-            "audience": [],
+            "audience": [
+                "memehub-server"
+            ],
             "jwkURI": "https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com",
             "requireAnyAudience": false,
             "signingAlgorithm": "",
