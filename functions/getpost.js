@@ -11,7 +11,7 @@ exports = async function(payload, response) {
   const jsonString = JSON.stringify(jsonData);
                                     
   const bodyy = JSON.parse(payload.body.text());
-  const bodyy = JSON.parse(payload.body.text());
+ 
   const pager = payload.query.page;
  
   var cluster = "mongodb-atlas";
