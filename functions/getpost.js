@@ -1,7 +1,7 @@
 exports = async function(payload, response) {
-  const fs = require('fs');
+  //const fs = require('fs');
   
-  if(payload.body === undefined) {
+  /*if(payload.body === undefined) {
       throw new Error(`Request body was not defined.`)
   }
   
@@ -11,7 +11,7 @@ exports = async function(payload, response) {
   const jsonString = JSON.stringify(jsonData);
                                     
   const bodyy = JSON.parse(payload.body.text());
- 
+ */
   const pager = payload.query.page;
  
   var cluster = "mongodb-atlas";
@@ -52,7 +52,7 @@ exports = async function(payload, response) {
        return { error: err.message };
    }
    
-  return jsonString;
-   //return { results:results };
+  //return jsonString;
+  return { results:results };
   
 };
