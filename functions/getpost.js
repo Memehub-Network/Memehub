@@ -1,10 +1,17 @@
 exports = async function(payload, response) {
+  const fs = require('fs');
   
   if(payload.body === undefined) {
       throw new Error(`Request body was not defined.`)
   }
-  const bodyy = JSON.parse(payload.body.text());
   
+  const filePath = 'functions/google-services (2).json';
+  const fileContents = fs.readFileSync(filePath, 'utf8');
+  const jsonData = JSON.parse(fileContents);
+  const jsonString = JSON.stringify(jsonData);
+                                    
+  const bodyy = JSON.parse(payload.body.text());
+  const bodyy = JSON.parse(payload.body.text());
   const pager = payload.query.page;
  
   var cluster = "mongodb-atlas";
@@ -45,6 +52,7 @@ exports = async function(payload, response) {
        return { error: err.message };
    }
    
-   return { results:results };
+  return jsonString;
+   //return { results:results };
   
 };
