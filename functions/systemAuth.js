@@ -3,7 +3,7 @@ exports = async function(req, res) {
   if(req.body === undefined) { 
        throw new Error(`Request body was not defined.`) 
    }
-  const model = JSON.parse(payload.body.text());
+  const model = JSON.parse(req.body.text());
 
   const email = model.email;
 const password = model.password;
