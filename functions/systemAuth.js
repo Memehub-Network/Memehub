@@ -12,15 +12,19 @@ const password = model.password;
   try {
     const result = await context.functions.execute("Function_0", email, password);
     if (result) {
-      //res.status(200).json({ message: "Authentication successful" });
-return "Authentication successful";
+      res.setStatusCode(201); 
+       // tip: You can also use EJSON.stringify instead of JSON.stringify. 
+       res.setBody(JSON.stringify({ 
+          message: "Auth Success"}));
     } else {
-return "Authentication failed";
-      //res.status(401).json({ message: "Authentication failed" });
+
+      res.setStatusCode(401); 
+       // tip: You can also use EJSON.stringify instead of JSON.stringify. 
+       res.setBody(JSON.stringify({ 
+          message: "Auth Failed"}));
     }
     } catch (error) {
-    //console.error(error);
-    //res.status(500).json({ message: "Internal server error" });
-return error.message;
+    res.setStatusCode(400); 
+      res.setBody(error.message);
   }
 };
