@@ -2,6 +2,13 @@ exports = async function(req, res) {
   const email = req.body.email;
   const password = req.body.password;
 
+  var cluster = "mongodb-atlas"; 
+   var dBase = "authentication"; 
+   var coll = "users";
+  
+    const collection = context.services.get(cluster).db(dBase).collection(coll); 
+ 
+
   try {
     const result = await context.functions.execute("authenticateUser", email, password);
     if (result) {
