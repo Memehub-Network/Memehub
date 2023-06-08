@@ -7,7 +7,13 @@ exports = async function(req, res) {
 
   const email = model.email;
 const password = model.password;
-  //const password = req.body.password;
+const username = model.username;
+
+if(username==null){
+    email = model.email;
+}else{
+    email = model.username;
+}
 
   try {
     const result = await context.functions.execute("Function_0", email, password);
