@@ -17,7 +17,7 @@ exports = async function(req, res) {
       const pass = password;
       
       try {
-         const result = await context.functions.execute("Function_0", username, password);
+         const result = await context.functions.execute("Function_0", username, pass);
     if (result) {
       res.setStatusCode(201); 
        // tip: You can also use EJSON.stringify instead of JSON.stringify. 
