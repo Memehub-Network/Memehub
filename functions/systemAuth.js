@@ -11,7 +11,7 @@ exports = async function(req, res) {
 
   if(model.username === ""){
       email = model.email;
-  }else{
+  }else if(model.username != null){
       email = model.username;
   }
 
