@@ -34,7 +34,7 @@
         "type": "local-userpass",
         "config": {
             "autoConfirm": true,
-            "resetPasswordUrl": "https://memehub.network/reset",
+            "resetPasswordUrl": "https://us-east-1.aws.data.mongodb-api.com/app/memehub-gjgyo/endpoint/reset/password",
             "runConfirmationFunction": false
         },
         "disabled": false
