@@ -5,16 +5,20 @@ exports = async function(req, res) {
    }
   const model = JSON.parse(req.body.text());
 
-  //const email = model.email;
   const password = model.password;
   const username = model.username;
+  
+  empty = "";
 
-  if(model.username === "" && model.email !=null){
+  if(model.username == empty){
       email = model.email;
-  }else if(model.username != null && model.email === ""){
-      email = model.username;
+      return "username empty!";
+  }else if(model.username !== empty){
+      username = model.username;
+      login();
   }
 
+function login(){
   try {
     const result = await context.functions.execute("Function_0",email, password);
     if (result) {
@@ -33,4 +37,5 @@ exports = async function(req, res) {
     res.setStatusCode(400); 
       res.setBody(error.message);
   }
+}
 };
