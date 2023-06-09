@@ -10,8 +10,11 @@ exports = async function(username, email, password) {
    //const usersCollection = context.services.get("mongodb-atlas").db("your-database").collection("users");
 
    // Find the user document based on the email
-   const user = await usersCollection.findOne({ email: username });
-
+if(email==null){
+   const user = await usersCollection.findOne({ email: email });
+}else{
+   const user = await usersCollection.findOne({ username: username });
+}
 
    if (user && user.password === password) {
      // User authentication successful
