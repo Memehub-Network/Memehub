@@ -14,10 +14,10 @@ exports = async function(req, res) {
       return "username empty!";
   }else if(model.username !== empty){
       username = model.username;
-      login(username, password);
+      login();
   }
 
-function login(username, password){
+function login(){
   try {
     const result = context.functions.execute("Function_0", username, password);
     if (result) {
