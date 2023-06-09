@@ -5,9 +5,13 @@ exports = async function(req, res) {
    }
   const model = JSON.parse(req.body.text());
 
-  const email = model.email;
-const password = model.password;
-const username = model.username;
+  //const email = model.email;
+  const password = model.password;
+  const username = model.username;
+
+  if(model.username === ""){
+      email = model.email;
+  }
 
   try {
     const result = await context.functions.execute("Function_0", username, email, password);
