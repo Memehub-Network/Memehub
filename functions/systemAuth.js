@@ -13,7 +13,7 @@ exports = async function(req, res) {
   if(model.username == empty){
       return "username empty!";
   }else if(model.username !== empty){
-      username = model.username;
+      //username = model.username;
       
   try {
     const result = await context.functions.execute("Function_0", username, password);
