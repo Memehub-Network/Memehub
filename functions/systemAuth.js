@@ -24,13 +24,13 @@ exports = async function(req, res) {
       res.setStatusCode(201); 
        // tip: You can also use EJSON.stringify instead of JSON.stringify. 
        res.setBody(JSON.stringify({ 
-          message: "Auth Success"}));
+          message: "success"}));
     } else {
 
       res.setStatusCode(401); 
        // tip: You can also use EJSON.stringify instead of JSON.stringify. 
        res.setBody(JSON.stringify({ 
-          message: "Auth Failed"}));
+          message: "failed"}));
     }
     } catch (error) {
     res.setStatusCode(400); 
