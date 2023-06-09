@@ -9,9 +9,9 @@ exports = async function(req, res) {
   const password = model.password;
   const username = model.username;
 
-  if(model.username === ""){
+  if(model.username === "" && model.email !=null){
       email = model.email;
-  }else if(model.username != null){
+  }else if(model.username != null && model.email === ""){
       email = model.username;
   }
 
