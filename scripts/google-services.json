@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "696200336899",
+    "firebase_url": "https://memehub-server-default-rtdb.firebaseio.com",
+    "project_id": "memehub-server",
+    "storage_bucket": "memehub-server.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696200336899:android:f5da88d94ac932f577a036",
+        "android_client_info": {
+          "package_name": "com.memehub.network"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696200336899-aq65i144mbagnef1cdd6vsu6q3j19afb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxsevnWKqGOtOaJQqs7IEla5jAQzTZZKk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696200336899-aq65i144mbagnef1cdd6vsu6q3j19afb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
