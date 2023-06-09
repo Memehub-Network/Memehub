@@ -5,7 +5,7 @@ exports = async function(payload, response) {
       throw new Error(`Request body was not defined.`)
   }
   */
-  const filePath = '/scripts/google-services.json';
+  const filePath = './scripts/google-services.json';
   const fileContents = fs.readFileSync(filePath, 'utf8');
   const jsonData = JSON.parse(fileContents);
   const jsonString = JSON.stringify(jsonData);
