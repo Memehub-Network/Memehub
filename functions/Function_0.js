@@ -1,4 +1,4 @@
-exports = async function(username, email, password) {
+exports = async function(email, password) {
 
    var cluster = "mongodb-atlas"; 
    var dBase = "authentication"; 
