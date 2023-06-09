@@ -12,7 +12,9 @@ exports = async function(req, res) {
 
   if(model.username == empty){
       return "username empty!";
-  }else{
+  }else if(model.password == empty){
+      return "password is null!";
+}else{
       //username = model.username;
       const pass = password;
       
