@@ -17,7 +17,7 @@ exports = async function(req, res) {
       login(username, password);
   }
 
-await function login(username, password){
+function login(username, password){
   try {
     const result = context.functions.execute("Function_0", username, password);
     if (result) {
