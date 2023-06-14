@@ -23,14 +23,14 @@ exports = async function(req, res) {
     if (result) {
       res.setStatusCode(201); 
        // tip: You can also use EJSON.stringify instead of JSON.stringify. 
-       res.setBody(JSON.stringify({ 
-          message: "success"}));
+       //res.setBody(JSON.stringify({ message: "success"}));
+      return "success";
     } else {
 
       res.setStatusCode(401); 
        // tip: You can also use EJSON.stringify instead of JSON.stringify. 
-       res.setBody(JSON.stringify({ 
-          message: "failed"}));
+       //res.setBody(JSON.stringify({ message: "failed"}));
+      return "failed";
     }
     } catch (error) {
     res.setStatusCode(400); 
