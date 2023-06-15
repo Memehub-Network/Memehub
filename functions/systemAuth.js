@@ -21,7 +21,7 @@ exports = async function(req, res) {
       try {
          const result = await context.functions.execute("Function_0", username, pass);
     if (result) {
-      res.setStatusCode(201); 
+      res.setStatusCode(200); 
        // tip: You can also use EJSON.stringify instead of JSON.stringify. 
        //res.setBody(JSON.stringify({ message: "success"}));
       return "success";
