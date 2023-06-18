@@ -1,7 +1,7 @@
 exports = async function(req, res) {
 
   if(req.body === undefined) { 
-       throw new Error(`Request body was not defined.`) 
+       throw new Error(`Request body was not defined.`);
    }
   const model = JSON.parse(req.body.text());
 
@@ -22,15 +22,15 @@ exports = async function(req, res) {
          const result = await context.functions.execute("Function_0", username, pass);
     if (result) {
       res.setStatusCode(201); 
-       // tip: You can also use EJSON.stringify instead of JSON.stringify. 
-       res.setBody(JSON.stringify({ 
-          message: "success"}));
+       // tip: You can also use EJSON.stringify instead of JSON.stringify.
+       return "success";
+       //res.setBody(JSON.stringify({ message: "success"}));
     } else {
 
       res.setStatusCode(401); 
        // tip: You can also use EJSON.stringify instead of JSON.stringify. 
-       res.setBody(JSON.stringify({ 
-          message: "failed"}));
+       //res.setBody(JSON.stringify({ message: "failed"}));
+       return "failed";
     }
     } catch (error) {
     res.setStatusCode(400); 
