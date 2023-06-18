@@ -1,19 +1,18 @@
 [
     {
+        "name": "loginAuthentication",
+        "private": false,
+        "run_as_system": true
+    },
+    {
         "name": "getNotifications",
         "private": false,
         "run_as_system": true
     },
     {
-         "name":"systemAuth",
-"private":false,
-"run_as_system":true
-},
-    {
-        "name": "getStories",
+        "name": "addNotification",
         "private": false,
-        "run_as_system": true,
-        "disable_arg_logs": true
+        "run_as_system": true
     },
     {
         "name": "getpost",
@@ -21,22 +20,7 @@
         "run_as_system": true
     },
     {
-        "name": "getposts",
-        "private": false,
-        "run_as_system": true
-    },
-    {
-        "name": "loginAuthentication",
-        "private": false,
-        "run_as_system": true
-    },
-    {
-        "name": "Function_0",
-        "private": false,
-        "disable_arg_logs": true
-    },
-    {
-        "name": "addNotification",
+        "name": "systemAuth",
         "private": false,
         "run_as_system": true
     },
@@ -46,8 +30,24 @@
         "run_as_system": true
     },
     {
-        "name": "systemAuth",
+        "name": "getStories",
+        "private": false,
+        "run_as_system": true,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "getposts",
         "private": false,
         "run_as_system": true
+    },
+    {
+        "name": "Function_0",
+        "private": false,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "SigninUSER",
+        "private": false,
+        "disable_arg_logs": true
     }
 ]
