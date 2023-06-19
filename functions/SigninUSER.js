@@ -29,8 +29,9 @@ exports = async function(payload) {
       return "user found";
     }else{
       usersCollection.insertOne(addUSER)
-      .then(result => console.log(`added user: ${result.insertedId}`))
-      .catch(err => console.error(`Failed to insert item: ${err}`));
+      return 'added user: ${result.insertedId}';
+      //.then(result => console.log(`added user: ${result.insertedId}`))
+      //.catch(err => console.error(`Failed to insert item: ${err}`));
     }
   }catch(err){
     return err.message;
