@@ -26,10 +26,10 @@ exports = async function(payload) {
     const result = await context.functions.execute("userCHECK", username, password);
     
     if(result){
-      return "user found";
+      return "user found" + payload.url;
     }else{
-      usersCollection.insertOne(addUSER)
-      return 'added user: ${result.insertedId}';
+      usersCollection.insertOne(addUSER);
+      return username;
       //.then(result => console.log(`added user: ${result.insertedId}`))
       //.catch(err => console.error(`Failed to insert item: ${err}`));
     }
