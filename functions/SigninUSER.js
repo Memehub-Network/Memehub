@@ -23,7 +23,7 @@ exports = async function(payload) {
   
   try{
     //return usersCollection.findOne({username: userpass});
-    const result = await context.functions.execute("userCHECK", userpass, password);
+    const result = await context.functions.execute("userCHECK", username, password);
     
     if(result){
       return "user found";
