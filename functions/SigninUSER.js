@@ -12,7 +12,7 @@ exports = function(payload) {
   query = { username: userpass };
   
   try{
-    const user = usersCollection.findOne({username: userpass});
+    return usersCollection.findOne({username: userpass});
     
   }catch(err){
     return err.message;
