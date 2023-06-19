@@ -6,17 +6,7 @@ exports = async function(payload) {
   
   
   const collection = context.services.get(cluster).db(dBase).collection(coll);
-  
-  const express = require('express');
-  const app = express();
 
-  app.get('/', function (req, res) {
-    res.send('Hello World');
-  });
-
-  app.listen(3000);
-  
-  
   //const http = require('https');
   
   try {
@@ -28,5 +18,5 @@ exports = async function(payload) {
        return { error: err.message };
   }
    
-  //return story;
+  return story;
 };
