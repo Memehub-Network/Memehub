@@ -11,7 +11,7 @@
         "return_type": "JSON"
     },
     {
-        "route": "/user/authentication/login",
+        "route": "/authentication/authenticate/login",
         "http_method": "POST",
         "function_name": "systemAuth",
         "validation_method": "NO_VALIDATION",
@@ -77,7 +77,7 @@
         "return_type": "JSON"
     },
     {
-        "route": "/user/authentication/signin",
+        "route": "/authentication/authenticate/register",
         "http_method": "POST",
         "function_name": "SigninUSER",
         "validation_method": "NO_VALIDATION",
