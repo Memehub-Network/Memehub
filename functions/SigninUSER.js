@@ -1,4 +1,13 @@
-exports = function(payload) {
+exports = async function(payload) {
+  
+  if(payload.body === undefined) { 
+       throw new Error(`Request body was not defined.`) 
+  }
+  const model = JSON.parse(payload.body.text());
+
+  const email = "";
+  const password = model.password;
+  const username = model.username;
   
   var cluster = "mongodb-atlas";
   var dBase = "authentication"; 
@@ -6,17 +15,25 @@ exports = function(payload) {
   
   const usersCollection = context.services.get(cluster).db(dBase).collection(coll); 
   
-  const userpass = "lil.mpesa";
-  const password = 'atsiaya#';
-  
-  query = { username: userpass };
+  const addUSER = {
+  "email": "",
+  "password": password,
+  "username": username
+};
   
   try{
-    return usersCollection.findOne({username: userpass});
+    //return usersCollection.findOne({username: userpass});
+    const result = await context.functions.execute("userCHECK", userpass, password);
     
+    if(result){
+      return "user found";
+    }else{
+      usersCollection.insertOne(addUSER)
+      .then(result => console.log(`added user: ${result.insertedId}`))
+      .catch(err => console.error(`Failed to insert item: ${err}`));
+    }
   }catch(err){
     return err.message;
   }
-  
   
 };
