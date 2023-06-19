@@ -1,8 +1,9 @@
 [
     {
-        "name": "loginAuthentication",
+        "name": "SigninUSER",
         "private": false,
-        "run_as_system": true
+        "run_as_system": true,
+        "disable_arg_logs": true
     },
     {
         "name": "getNotifications",
@@ -10,7 +11,12 @@
         "run_as_system": true
     },
     {
-        "name": "addNotification",
+        "name": "getposts",
+        "private": false,
+        "run_as_system": true
+    },
+    {
+        "name": "loginAuthentication",
         "private": false,
         "run_as_system": true
     },
@@ -21,6 +27,11 @@
     },
     {
         "name": "systemAuth",
+        "private": false,
+        "run_as_system": true
+    },
+    {
+        "name": "addNotification",
         "private": false,
         "run_as_system": true
     },
@@ -36,7 +47,7 @@
         "disable_arg_logs": true
     },
     {
-        "name": "getposts",
+        "name": "checkAccount",
         "private": false,
         "run_as_system": true
     },
@@ -44,16 +55,5 @@
         "name": "Function_0",
         "private": false,
         "disable_arg_logs": true
-    },
-    {
-        "name": "SigninUSER",
-        "private": false,
-        "run_as_system": true,
-        "disable_arg_logs": true
-    },
-    {
-        "name": "checkAccount",
-        "private": false,
-        "run_as_system": true
     }
 ]
