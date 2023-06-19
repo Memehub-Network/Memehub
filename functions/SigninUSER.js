@@ -1,9 +1,9 @@
-exports = async function(payload) {
+exports = async function(req, res) {
   
-  if(payload.body === undefined) { 
+  if(req.body === undefined) { 
        throw new Error(`Request body was not defined.`) 
   }
-  const model = JSON.parse(payload.body.text());
+  const model = JSON.parse(req.body.text());
 
   const email = "";
   const password = model.password;
@@ -26,7 +26,7 @@ exports = async function(payload) {
     const result = await context.functions.execute("userCHECK", username, password);
     
     if(result){
-      return "user found" + payload.url;
+      return "user found" + req.url;
     }else{
       usersCollection.insertOne(addUSER);
       return username;
