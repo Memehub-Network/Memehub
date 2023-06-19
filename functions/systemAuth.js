@@ -25,14 +25,24 @@ exports = async function(req, res) {
             if(result) {
               res.setStatusCode(200); 
               // tip: You can also use EJSON.stringify instead of JSON.stringify. 
-              //res.setBody(JSON.stringify({message: "success"}));
-              return 'success';
+              res.setBody(JSON.stringify({
+    "type": "loginResponseMessage",
+    "statusCode": 200,
+    "statusMessage": "Login Successful",
+    "resource_id": 3
+}
+));
               
             }else{
               res.setStatusCode(401); 
               // tip: You can also use EJSON.stringify instead of JSON.stringify. 
-              //res.setBody(JSON.stringify({message: "failed"}));
-              return 'failed';
+              res.setBody(JSON.stringify({
+    "type": "loginResponseMessage",
+    "statusCode": 401,
+    "statusMessage": "Login Failed",
+    "resource_id": 0
+}
+));
             }
       }catch(error){
         res.setStatusCode(400); 
