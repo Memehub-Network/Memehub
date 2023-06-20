@@ -26,7 +26,7 @@ exports = async function(req, res) {
               res.setStatusCode(200); 
               // tip: You can also use EJSON.stringify instead of JSON.stringify. 
               res.setBody(JSON.stringify({
-    "type": "loginResponseMessage",
+    "type": "login",
     "statusCode": 200,
     "statusMessage": "Login Successful",
     "resource_id": 3
