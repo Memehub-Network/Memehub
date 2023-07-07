@@ -39,19 +39,7 @@ exports = async function(req, res) {
           "type": "login",
           "statusCode": 200,
           "statusMessage": "Login Successful",
-          "resource_id": 3,
-          "data":{
-             "id": "12",
-             "username": "lil.mpesa",
-             "full_name": "Lil Mpesa",
-             "profile_picture": "https://https://sistosse.sirv.com/e8d34805ca4978d5b3e72d8922448940.jpg",
-             "bio": "The urban Troll👑",
-             "website": "https://m.facebook.com/lil.mpesaa",
-             "counts": {
-                "media": 29,
-                "follows": 10,
-                "followed_by": 17899
-             }
+          "resource_id": 3
           }
         }));
         
