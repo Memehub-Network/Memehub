@@ -53,7 +53,5 @@ exports = async function(payload, response) {
    }
    
    return JSON.stringify({ "page":pageQ, "data": results });
-  //return [ page: 1,results:results ];
-  return dataa;
   
 };
