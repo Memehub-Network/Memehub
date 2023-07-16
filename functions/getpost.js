@@ -40,9 +40,9 @@ exports = async function(payload, response) {
       
        if(Array.isArray(posts) && !posts.length){
          if(pages>1){
-           results = "End";
+           results = [];
          }else
-         results = "No Results!";
+         results = [{ message: "no results}];
       
        }else{
          results = posts;
