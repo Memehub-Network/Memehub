@@ -16,10 +16,16 @@ exports = async function(payload, response) {
   var pageNumber = 0;
   
   if(pager!=null){
-    pageNumber = pager;
-    pageQ = pager;
+    if(pager == 0){
+      
+      pageNumber = pager;
+      pageQ = pager+1;
+    }else{
+      pageNumber = pager;
+      pageQ = pager;
+    }
   }else{
-   pageQ = 0;
+   pageQ = 1;
   }
   
    const collection = context.services.get(cluster).db(dBase).collection(coll);
@@ -46,7 +52,7 @@ exports = async function(payload, response) {
        return { error: err.message };
    }
    
-   const dataa = JSON.stringify([ "page":pager, "data": results ]);
+   return JSON.stringify({ "page":pageQ, "data": results });
   //return [ page: 1,results:results ];
   return dataa;
   
