@@ -52,7 +52,7 @@ exports = async function(payload, response) {
        return { error: err.message };
    }
    
-  return jsonString;
+  return results;
    //return { results:results };
   
 };
