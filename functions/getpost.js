@@ -17,13 +17,13 @@ exports = async function(payload, response) {
   
   if(pager!=null){
     if(pager == 0){
-      
       pageNumber = pager;
       pageQ = pager+1;
     }else{
-      pageNumber = pager;
-      pageQ = pager;
+    pageNumber = pager;
+    pageQ = pager;
     }
+      
   }else{
    pageQ = 1;
   }
@@ -52,6 +52,6 @@ exports = async function(payload, response) {
        return { error: err.message };
    }
    
-   return JSON.stringify({ "page":pageQ, "data": results });
+  return { page: pageQ, data:results };
   
 };
