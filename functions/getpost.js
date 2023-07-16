@@ -46,10 +46,8 @@ exports = async function(payload, response) {
        return { error: err.message };
    }
    
+   const dataa = JSON.stringify([ "page":pager, "data": results ]);
   //return [ page: 1,results:results ];
-  return JSON.stringify([
-     "page":pager,
-     "data": results
-     ]);
+  return dataa;
   
 };
