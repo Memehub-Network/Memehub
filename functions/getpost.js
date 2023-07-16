@@ -48,8 +48,8 @@ exports = async function(payload, response) {
    
   //return [ page: 1,results:results ];
   return JSON.stringify([
-     page:pager,
-     data: results
+     "page":pager,
+     "data": results
      ]);
   
 };
