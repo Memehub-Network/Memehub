@@ -10,7 +10,8 @@ exports = async function(payload, response) {
   var cluster = "mongodb-atlas";
   var dBase = "memehubclient";
   var coll = "posts";
-
+  
+  var pageQ = 0;
   var pageSize = 5;
   var pageNumber = 0;
   
@@ -18,7 +19,7 @@ exports = async function(payload, response) {
     pageNumber = pager;
     pageQ = pager;
   }else{
-   var pageQ = 0;
+   pageQ = 0;
   }
   
    const collection = context.services.get(cluster).db(dBase).collection(coll);
