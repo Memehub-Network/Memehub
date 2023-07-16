@@ -46,6 +46,10 @@ exports = async function(payload, response) {
        return { error: err.message };
    }
    
-  return [ page: 1,results:results ];
+  //return [ page: 1,results:results ];
+  return JSON.stringify([
+     page:pager,
+     data: results
+     ]);
   
 };
