@@ -17,7 +17,7 @@ exports = async function(payload, response) {
   
   if(pager!=null){
     if(pager == 0){
-      pageNumber = 1;
+      pageNumber = 0;
       pageQ = 1;
     }else{
     pageNumber = pager;
