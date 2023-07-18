@@ -45,7 +45,7 @@ exports = async function(payload, response) {
          if(pages>1){
            results = [];
          }else
-         results = [{"message":"No Results"}];
+         results = [];
       
        }else{
          results = posts;
