@@ -5,41 +5,46 @@ exports = async function(payload, response) {
   }
   */
  
-  const pager = payload.query.page;
+  const pageNumber = payload.query.page;
+ /*
+ 
+ exports = function(pageNumber) {
+  const pageSize = 5; // Number of items to return per page
+  const startIndex = (pageNumber - 1) * pageSize;
+  const endIndex = startIndex + pageSize;
+
+  const postsCollection = context.services.get("mongodb-atlas").db("yourDatabaseName").collection("yourCollectionName");
+
+  try {
+    // Query the database to get the items for the requested page
+    const posts = postsCollection.find({}).sort({ _id: -1 }).skip(startIndex).limit(pageSize).toArray();
+
+    return posts;
+  } catch (error) {
+    // Handle any errors that occur during the database query
+    return { error: error.message };
+  }
+};
+ 
+ 
+ */
+ 
+ 
  
   var cluster = "mongodb-atlas";
   var dBase = "memehubclient";
   var coll = "posts";
   
-  var pageQ = 0;
-  var pageSize = 5;
-  var pageNumber = 0;
-  
-  if(pager!=null){
-    if(pager == 0){
-      pageNumber = 0;
-      pageQ = 1;
-    }else if(pager == 1){
-      pageNumber = 0;
-      pageQ = 1;
-    }else{
-    pageNumber = pager;
-    pageQ = pager;
-    }
-      
-  }else{
-   pageQ = 1;
-  }
+  const pageSize = 5; // Number of items to return per page
+  const startIndex = (pageNumber - 1) * pageSize;
+  const endIndex = startIndex + pageSize;
   
    const collection = context.services.get(cluster).db(dBase).collection(coll);
    
    try {
      pages = await collection.count({});
      
-       posts = await collection.find({})
-       .skip(pageSize * pageNumber)
-       .limit(pageSize)
-       .toArray();
+       posts = await collection.find({}).sort({ _id: -1 }).skip(startIndex).limit(pageSize).toArray();
       
        if(Array.isArray(posts) && !posts.length){
          if(pages>1){
@@ -55,6 +60,10 @@ exports = async function(payload, response) {
        return { error: err.message };
    }
    
-  return { page: pageQ, data:results };
+  return { 
+    page: pageNumber, 
+    data:results, 
+    total_results: pages 
+  };
   
 };
