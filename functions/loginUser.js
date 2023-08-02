@@ -1,38 +1,49 @@
-exports = async function(arg){
-  // This default function will get a value and find a document in MongoDB
-  // To see plenty more examples of what you can do with functions see: 
-  // https://www.mongodb.com/docs/atlas/app-services/functions/
+exports = async
+function(payload) {
+    const {
+        email, password
+    } = payload;
 
-  // Find the name of the MongoDB service you want to use (see "Linked Data Sources" tab)
-  var serviceName = "mongodb-atlas";
+    try {
+        // Authenticate the user
+        const user = await context.auth.login(email, password);
 
-  // Update these to reflect your db/collection
-  var dbName = "db_name";
-  var collName = "coll_name";
+        // Access the user's custom data (assuming it's set)
+        const customData = context.user.customData;
 
-  // Get a collection from the context
-  var collection = context.services.get(serviceName).db(dbName).collection(collName);
+        // Create the response object
+        const response = {
+            status: "success",
+            message: "Login successful",
+            user: {
+                id: user.id,
+                username: customData.username || "", // Assuming username is part of customData
+                email: user.data.email,
+                full_name: customData.full_name || "", // Assuming full_name is part of customData
+                avatar_url: customData.avatar_url || "", // Assuming avatar_url is part of customData
+                cover_pic_url: customData.cover_pic_url || "", // Assuming cover_pic_url is part of customData
+                followers_count: customData.followers_count || 0, // Assuming followers_count is part of customData
+                following_count: customData.following_count || 0, // Assuming following_count is part of customData
+                is_verified: customData.is_verified || false, // Assuming is_verified is part of customData
+                bio: customData.bio || "", // Assuming bio is part of customData
+                website: customData.website || "", // Assuming website is part of customData
+                post_count: customData.post_count || 0, // Assuming post_count is part of customData
+                role: customData.role || "user" // Assuming role is part of customData
+            },
+            access_token: context.user.customData.accessToken,
+            refresh_token: context.user.customData.refreshToken,
+            expires_in: 3600
+        };
 
-  var findResult;
-  try {
-    // Get a value from the context (see "Values" tab)
-    // Update this to reflect your value's name.
-    var valueName = "value_name";
-    var value = context.values.get(valueName);
-
-    // Execute a FindOne in MongoDB 
-    findResult = await collection.findOne(
-      { owner_id: context.user.id, "fieldName": value, "argField": arg},
-    );
-
-  } catch(err) {
-    console.log("Error occurred while executing findOne:", err.message);
-
-    return { error: err.message };
-  }
-
-  // To call other named functions:
-  // var result = context.functions.execute("function_name", arg1, arg2);
-
-  return { result: findResult };
+        return response;
+    } catch (error) {
+        // Failed to log in
+        return {
+            status: "error",
+            message: "Failed to log in. Please check your credentials.",
+            access_token: null,
+            refresh_token: null,
+            expires_in: 0
+        };
+    }
 };
