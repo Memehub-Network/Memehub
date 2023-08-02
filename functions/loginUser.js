@@ -1,5 +1,4 @@
-exports = async
-function(payload) {
+exports = async function(payload) {
     const {
         email, password
     } = payload;
