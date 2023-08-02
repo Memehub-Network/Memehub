@@ -1,30 +1,14 @@
 [
     {
-        "name": "getStories",
-        "private": false,
-        "run_as_system": true,
-        "disable_arg_logs": true
-    },
-    {
-        "name": "userCHECK",
-        "private": false,
-        "run_as_system": true
-    },
-    {
-        "name": "getposts",
-        "private": false,
-        "run_as_system": true
-    },
-    {
-        "name": "Function_0",
-        "private": false,
-        "disable_arg_logs": true
-    },
-    {
         "name": "SigninUSER",
         "private": false,
         "run_as_system": true,
         "disable_arg_logs": true
+    },
+    {
+        "name": "addNotification",
+        "private": false,
+        "run_as_system": true
     },
     {
         "name": "checkAccount",
@@ -37,24 +21,14 @@
         "run_as_system": true
     },
     {
-        "name": "addNotification",
-        "private": false,
-        "run_as_system": true
-    },
-    {
-        "name": "loginAuthentication",
-        "private": false,
-        "run_as_system": true
-    },
-    {
         "name": "systemAuth",
         "private": false,
         "run_as_system": true
     },
     {
-        "name": "getpost",
+        "name": "Function_0",
         "private": false,
-        "run_as_system": true
+        "disable_arg_logs": true
     },
     {
         "name": "deleteNot",
@@ -62,7 +36,39 @@
         "run_as_system": true
     },
     {
+        "name": "getposts",
+        "private": false,
+        "run_as_system": true
+    },
+    {
+        "name": "userCHECK",
+        "private": false,
+        "run_as_system": true
+    },
+    {
+        "name": "getStories",
+        "private": false,
+        "run_as_system": true,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "getpost",
+        "private": false,
+        "run_as_system": true
+    },
+    {
         "name": "deletePost",
+        "private": false,
+        "run_as_system": true,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "loginAuthentication",
+        "private": false,
+        "run_as_system": true
+    },
+    {
+        "name": "loginUser",
         "private": false,
         "run_as_system": true,
         "disable_arg_logs": true
