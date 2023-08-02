@@ -72,5 +72,12 @@
         "private": false,
         "run_as_system": true,
         "disable_arg_logs": true
+    },
+    {
+
+        "name": "createpUser",
+        "private": false,
+        "run_as_system": true,
+        "disable_arg_logs": true
     }
 ]
