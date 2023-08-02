@@ -1,7 +1,7 @@
 {
     "enabled": true,
     "mongo_service_name": "memehub",
-    "database_name": "memehubauth",
+    "database_name": "memehubclient",
     "collection_name": "users",
     "user_id_field": "1"
 }
