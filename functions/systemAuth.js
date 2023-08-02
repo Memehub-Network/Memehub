@@ -40,7 +40,7 @@ exports = async function(req, res) {
           "statusCode": 200,
           "statusMessage": "Login Successful",
           "resource_id": 3
-          }
+          
         }));
         
       }else{
