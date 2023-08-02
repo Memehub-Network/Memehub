@@ -38,12 +38,12 @@ function(payload) {
         return response;
     } catch (error) {
         // Failed to log in
-        return {
+        return error.message;/*{
             status: "error",
             message: "Failed to log in. Please check your credentials.",
             access_token: null,
             refresh_token: null,
             expires_in: 0
-        };
+        };*/
     }
 };
