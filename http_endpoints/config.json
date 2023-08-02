@@ -1,16 +1,5 @@
 [
     {
-        "route": "/feed/posts",
-        "http_method": "POST",
-        "function_name": "getpost",
-        "validation_method": "NO_VALIDATION",
-        "respond_result": true,
-        "fetch_custom_user_data": false,
-        "create_user_on_auth": false,
-        "disabled": false,
-        "return_type": "JSON"
-    },
-    {
         "route": "/feed/stories",
         "http_method": "GET",
         "function_name": "getStories",
@@ -33,8 +22,19 @@
         "return_type": "JSON"
     },
     {
-        "route": "/home/feed/unknown",
-        "http_method": "GET",
+        "route": "/delete/post",
+        "http_method": "DELETE",
+        "function_name": "deletePost",
+        "validation_method": "NO_VALIDATION",
+        "respond_result": true,
+        "fetch_custom_user_data": false,
+        "create_user_on_auth": false,
+        "disabled": false,
+        "return_type": "JSON"
+    },
+    {
+        "route": "/feed/posts",
+        "http_method": "POST",
         "function_name": "getpost",
         "validation_method": "NO_VALIDATION",
         "respond_result": true,
@@ -79,7 +79,7 @@
     {
         "route": "/user/authentication/login",
         "http_method": "POST",
-        "function_name": "systemAuth",
+        "function_name": "loginUser",
         "validation_method": "NO_VALIDATION",
         "respond_result": true,
         "fetch_custom_user_data": false,
@@ -99,9 +99,9 @@
         "return_type": "JSON"
     },
     {
-        "route": "/delete/post",
-        "http_method": "DELETE",
-        "function_name": "deletePost",
+        "route": "/home/feed/unknown",
+        "http_method": "GET",
+        "function_name": "getpost",
         "validation_method": "NO_VALIDATION",
         "respond_result": true,
         "fetch_custom_user_data": false,
