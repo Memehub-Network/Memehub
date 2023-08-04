@@ -1,8 +1,10 @@
 exports = async function(request, response) {
 
-    const deployment = context.services.get(mongodb-atlas);
-    const database = deployment.db(memehubclient);
-    const collection = database.collection(users);
+       var cluster = "mongodb-atlas"; 
+   var dBase = "authentication";  
+   var coll = "users";  
+  
+   const createUser = context.services.get(cluster).db(dBase).collection(coll); 
 
     try {
         // 1. Parse data from the incoming request
@@ -15,10 +17,11 @@ exports = async function(request, response) {
         let uid = body.uid;
         let email = body.email;
 
+
         let timestamp = new Date();
 
         // 2. Handle the request
-        const { insertedId } = await collection.insertOne({
+        const { insertedId } = await createUser.insertOne({
             id: uid,
             username: username,
             email: email,
