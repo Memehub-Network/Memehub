@@ -1,19 +1,14 @@
 [
     {
-        "name": "SigninUSER",
+        "name": "systemAuth",
+        "private": false,
+        "run_as_system": true
+    },
+    {
+        "name": "deletePost",
         "private": false,
         "run_as_system": true,
         "disable_arg_logs": true
-    },
-    {
-        "name": "addNotification",
-        "private": false,
-        "run_as_system": true
-    },
-    {
-        "name": "checkAccount",
-        "private": false,
-        "run_as_system": true
     },
     {
         "name": "getNotifications",
@@ -21,7 +16,7 @@
         "run_as_system": true
     },
     {
-        "name": "systemAuth",
+        "name": "loginAuthentication",
         "private": false,
         "run_as_system": true
     },
@@ -36,34 +31,13 @@
         "run_as_system": true
     },
     {
-        "name": "getposts",
-        "private": false,
-        "run_as_system": true
-    },
-    {
-        "name": "userCHECK",
-        "private": false,
-        "run_as_system": true
-    },
-    {
         "name": "getStories",
         "private": false,
         "run_as_system": true,
         "disable_arg_logs": true
     },
     {
-        "name": "getpost",
-        "private": false,
-        "run_as_system": true
-    },
-    {
-        "name": "deletePost",
-        "private": false,
-        "run_as_system": true,
-        "disable_arg_logs": true
-    },
-    {
-        "name": "loginAuthentication",
+        "name": "checkAccount",
         "private": false,
         "run_as_system": true
     },
@@ -74,10 +48,29 @@
         "disable_arg_logs": true
     },
     {
-
-        "name": "createUser",
+        "name": "getposts",
+        "private": false,
+        "run_as_system": true
+    },
+    {
+        "name": "getpost",
+        "private": false,
+        "run_as_system": true
+    },
+    {
+        "name": "userCHECK",
+        "private": false,
+        "run_as_system": true
+    },
+    {
+        "name": "SigninUSER",
         "private": false,
         "run_as_system": true,
         "disable_arg_logs": true
+    },
+    {
+        "name": "addNotification",
+        "private": false,
+        "run_as_system": true
     }
 ]
