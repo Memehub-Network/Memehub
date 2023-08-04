@@ -21,7 +21,7 @@ exports = async function(request, response) {
         let timestamp = new Date();
 
         // 2. Handle the request
-        const { insertedId } = await createUser.insertOne({
+        createUser.insertOne({
             id: uid,
             username: username,
             email: email,
@@ -50,11 +50,11 @@ exports = async function(request, response) {
         response.setStatusCode(201);
         // tip: You can also use EJSON.stringify instead of JSON.stringify.
         response.setBody(JSON.stringify({
-            message: "user created",
-            insertedId,
+            message: "user created"
         }));
     } catch (error) {
         response.setStatusCode(401);
-        response.setBody(error.message);
+        return { error: error.message };
+        //response.setBody(error.message);
     }
 };
