@@ -1,30 +1,8 @@
 [
     {
-        "route": "/home/feed/unknown",
-        "http_method": "GET",
-        "function_name": "getpost",
-        "validation_method": "NO_VALIDATION",
-        "respond_result": true,
-        "fetch_custom_user_data": false,
-        "create_user_on_auth": false,
-        "disabled": false,
-        "return_type": "JSON"
-    },
-    {
-        "route": "/authentication/users/login",
-        "http_method": "POST",
-        "function_name": "loginAuthentication",
-        "validation_method": "NO_VALIDATION",
-        "respond_result": true,
-        "fetch_custom_user_data": false,
-        "create_user_on_auth": false,
-        "disabled": false,
-        "return_type": "JSON"
-    },
-    {
-        "route": "/user/authentication/login",
-        "http_method": "POST",
-        "function_name": "loginUser",
+        "route": "/delete/post",
+        "http_method": "DELETE",
+        "function_name": "deletePost",
         "validation_method": "NO_VALIDATION",
         "respond_result": true,
         "fetch_custom_user_data": false,
@@ -55,17 +33,6 @@
         "return_type": "JSON"
     },
     {
-        "route": "/user/authentication/signup",
-        "http_method": "POST",
-        "function_name": "SigninUSER",
-        "validation_method": "NO_VALIDATION",
-        "respond_result": true,
-        "fetch_custom_user_data": false,
-        "create_user_on_auth": false,
-        "disabled": false,
-        "return_type": "JSON"
-    },
-    {
         "route": "/notifications/add",
         "http_method": "POST",
         "function_name": "addNotification",
@@ -77,7 +44,7 @@
         "return_type": "JSON"
     },
     {
-        "route": "/feed/posts",
+        "route": "/home/feed/unknown",
         "http_method": "GET",
         "function_name": "getpost",
         "validation_method": "NO_VALIDATION",
@@ -99,9 +66,42 @@
         "return_type": "JSON"
     },
     {
-        "route": "/delete/post",
-        "http_method": "DELETE",
-        "function_name": "deletePost",
+        "route": "/user/authentication/signup",
+        "http_method": "POST",
+        "function_name": "createUser",
+        "validation_method": "NO_VALIDATION",
+        "respond_result": true,
+        "fetch_custom_user_data": false,
+        "create_user_on_auth": false,
+        "disabled": false,
+        "return_type": "JSON"
+    },
+    {
+        "route": "/user/authentication/login",
+        "http_method": "POST",
+        "function_name": "loginUser",
+        "validation_method": "NO_VALIDATION",
+        "respond_result": true,
+        "fetch_custom_user_data": false,
+        "create_user_on_auth": false,
+        "disabled": false,
+        "return_type": "JSON"
+    },
+    {
+        "route": "/feed/posts",
+        "http_method": "GET",
+        "function_name": "getpost",
+        "validation_method": "NO_VALIDATION",
+        "respond_result": true,
+        "fetch_custom_user_data": false,
+        "create_user_on_auth": false,
+        "disabled": false,
+        "return_type": "JSON"
+    },
+    {
+        "route": "/authentication/users/login",
+        "http_method": "POST",
+        "function_name": "loginAuthentication",
         "validation_method": "NO_VALIDATION",
         "respond_result": true,
         "fetch_custom_user_data": false,
