@@ -1,14 +1,13 @@
 [
     {
-        "name": "systemAuth",
+        "name": "Function_0",
         "private": false,
-        "run_as_system": true
+        "disable_arg_logs": true
     },
     {
-        "name": "deletePost",
+        "name": "addNotification",
         "private": false,
-        "run_as_system": true,
-        "disable_arg_logs": true
+        "run_as_system": true
     },
     {
         "name": "getNotifications",
@@ -16,28 +15,7 @@
         "run_as_system": true
     },
     {
-        "name": "loginAuthentication",
-        "private": false,
-        "run_as_system": true
-    },
-    {
-        "name": "Function_0",
-        "private": false,
-        "disable_arg_logs": true
-    },
-    {
-        "name": "deleteNot",
-        "private": false,
-        "run_as_system": true
-    },
-    {
-        "name": "getStories",
-        "private": false,
-        "run_as_system": true,
-        "disable_arg_logs": true
-    },
-    {
-        "name": "checkAccount",
+        "name": "getposts",
         "private": false,
         "run_as_system": true
     },
@@ -48,7 +26,13 @@
         "disable_arg_logs": true
     },
     {
-        "name": "getposts",
+        "name": "SigninUSER",
+        "private": false,
+        "run_as_system": true,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "loginAuthentication",
         "private": false,
         "run_as_system": true
     },
@@ -63,14 +47,36 @@
         "run_as_system": true
     },
     {
-        "name": "SigninUSER",
+        "name": "systemAuth",
+        "private": false,
+        "run_as_system": true
+    },
+    {
+        "name": "createUser",
         "private": false,
         "run_as_system": true,
         "disable_arg_logs": true
     },
     {
-        "name": "addNotification",
+        "name": "deleteNot",
         "private": false,
         "run_as_system": true
+    },
+    {
+        "name": "checkAccount",
+        "private": false,
+        "run_as_system": true
+    },
+    {
+        "name": "deletePost",
+        "private": false,
+        "run_as_system": true,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "getStories",
+        "private": false,
+        "run_as_system": true,
+        "disable_arg_logs": true
     }
 ]
