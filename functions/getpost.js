@@ -61,7 +61,7 @@ exports = async function(payload, response) {
    }
    
   return { 
-    page: pageNumber, 
+    status: pageNumber, 
     data:results, 
     total_results: pages 
   };
