@@ -1,8 +1,8 @@
 [
     {
-        "route": "/delete/post",
-        "http_method": "DELETE",
-        "function_name": "deletePost",
+        "route": "/feed/stories",
+        "http_method": "GET",
+        "function_name": "getStories",
         "validation_method": "NO_VALIDATION",
         "respond_result": true,
         "fetch_custom_user_data": false,
@@ -11,9 +11,20 @@
         "return_type": "JSON"
     },
     {
-        "route": "/feed/posts",
+        "route": "/user/authentication/signup",
         "http_method": "POST",
-        "function_name": "getpost",
+        "function_name": "createUser",
+        "validation_method": "NO_VALIDATION",
+        "respond_result": true,
+        "fetch_custom_user_data": false,
+        "create_user_on_auth": false,
+        "disabled": false,
+        "return_type": "JSON"
+    },
+    {
+        "route": "/delete/post",
+        "http_method": "DELETE",
+        "function_name": "deletePost",
         "validation_method": "NO_VALIDATION",
         "respond_result": true,
         "fetch_custom_user_data": false,
@@ -55,28 +66,6 @@
         "return_type": "JSON"
     },
     {
-        "route": "/feed/stories",
-        "http_method": "GET",
-        "function_name": "getStories",
-        "validation_method": "NO_VALIDATION",
-        "respond_result": true,
-        "fetch_custom_user_data": false,
-        "create_user_on_auth": false,
-        "disabled": false,
-        "return_type": "JSON"
-    },
-    {
-        "route": "/user/authentication/signup",
-        "http_method": "POST",
-        "function_name": "createUser",
-        "validation_method": "NO_VALIDATION",
-        "respond_result": true,
-        "fetch_custom_user_data": false,
-        "create_user_on_auth": false,
-        "disabled": false,
-        "return_type": "JSON"
-    },
-    {
         "route": "/user/authentication/login",
         "http_method": "POST",
         "function_name": "loginUser",
@@ -102,6 +91,28 @@
         "route": "/authentication/users/login",
         "http_method": "POST",
         "function_name": "loginAuthentication",
+        "validation_method": "NO_VALIDATION",
+        "respond_result": true,
+        "fetch_custom_user_data": false,
+        "create_user_on_auth": false,
+        "disabled": false,
+        "return_type": "JSON"
+    },
+    {
+        "route": "/feed/posts",
+        "http_method": "POST",
+        "function_name": "getpost",
+        "validation_method": "NO_VALIDATION",
+        "respond_result": true,
+        "fetch_custom_user_data": false,
+        "create_user_on_auth": false,
+        "disabled": false,
+        "return_type": "JSON"
+    },
+    {
+        "route": "/search",
+        "http_method": "GET",
+        "function_name": "searchResult",
         "validation_method": "NO_VALIDATION",
         "respond_result": true,
         "fetch_custom_user_data": false,

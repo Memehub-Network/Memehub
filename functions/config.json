@@ -1,21 +1,6 @@
 [
     {
-        "name": "Function_0",
-        "private": false,
-        "disable_arg_logs": true
-    },
-    {
-        "name": "addNotification",
-        "private": false,
-        "run_as_system": true
-    },
-    {
-        "name": "getNotifications",
-        "private": false,
-        "run_as_system": true
-    },
-    {
-        "name": "getposts",
+        "name": "systemAuth",
         "private": false,
         "run_as_system": true
     },
@@ -26,13 +11,45 @@
         "disable_arg_logs": true
     },
     {
-        "name": "SigninUSER",
+        "name": "deleteNot",
+        "private": false,
+        "run_as_system": true
+    },
+    {
+        "name": "getStories",
         "private": false,
         "run_as_system": true,
         "disable_arg_logs": true
     },
     {
+        "name": "deletePost",
+        "private": false,
+        "run_as_system": true,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "addNotification",
+        "private": false,
+        "run_as_system": true
+    },
+    {
         "name": "loginAuthentication",
+        "private": false,
+        "run_as_system": true
+    },
+    {
+        "name": "createUser",
+        "private": false,
+        "run_as_system": true,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "Function_0",
+        "private": false,
+        "disable_arg_logs": true
+    },
+    {
+        "name": "getposts",
         "private": false,
         "run_as_system": true
     },
@@ -47,36 +64,24 @@
         "run_as_system": true
     },
     {
-        "name": "systemAuth",
-        "private": false,
-        "run_as_system": true
-    },
-    {
-        "name": "createUser",
-        "private": false,
-        "run_as_system": true,
-        "disable_arg_logs": true
-    },
-    {
-        "name": "deleteNot",
-        "private": false,
-        "run_as_system": true
-    },
-    {
         "name": "checkAccount",
         "private": false,
         "run_as_system": true
     },
     {
-        "name": "deletePost",
+        "name": "SigninUSER",
         "private": false,
         "run_as_system": true,
         "disable_arg_logs": true
     },
     {
-        "name": "getStories",
+        "name": "getNotifications",
         "private": false,
-        "run_as_system": true,
+        "run_as_system": true
+    },
+    {
+        "name": "searchResult",
+        "private": false,
         "disable_arg_logs": true
     }
 ]
