@@ -29,7 +29,7 @@ exports = function({ query, headers, body}, response) {
     // The return value of the function is sent as the response back to the client
     // when the "Respond with Result" setting is set.
     //return  "Hello World!";
-    //return "[{
+    return "[{
 "type": "post"
 }]";
 };
