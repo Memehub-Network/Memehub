@@ -13,8 +13,13 @@ exports = async function(payload, response) {
     }
 
     if (action === "drop") {
-        return await collection.drop();
-    } else if (action === "create" || action === "insert") {
+    try {
+      const result = await collection.deleteMany({});
+      return `${result.deletedCount} documents deleted.`;
+    } catch (error) {
+      return `Error deleting documents: ${error.message}`;
+    }
+  } else if (action === "create" || action === "insert") {
         const randomChoice = Math.random() < 0.5 ? "user" : "post";
         const document = {
             type: randomChoice,
