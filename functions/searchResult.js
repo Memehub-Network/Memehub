@@ -3,18 +3,28 @@ exports = async function(payload, response) {
     var dBase = "memehubclient";
     var coll = "search_Lab";
 
+var pageSize = 15;
+
     const collection = context.services.get(cluster).db(dBase).collection(coll);
 
     const action = payload.query.search;
 
     if (action == null) {
+
+       const results = await collection.find({}).sort({ _id: -1 }).limit(pageSize).toArray();
+
+
       const randomChoice = Math.random() < 0.5 ? "user" : "post";
       
+if(results != null){
+return [results];
+}else{
         return [
             {
                 type: randomChoice
             }
         ];
+}
     }
 
     if (action === "drop") {
