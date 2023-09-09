@@ -5,14 +5,14 @@ exports = function(payload, response) {
 
     const collection = context.services.get(cluster).db(dBase).collection(coll);
 
-    const action = payload.query.action;
+    const action = payload.query.search;
 
     if (action == null) {
       const randomChoice = Math.random() < 0.5 ? "user" : "post";
       
         return [
             {
-                "type": randomChoice
+                type: randomChoice
             }
         ];
     }
@@ -38,6 +38,6 @@ exports = function(payload, response) {
         // Delete the inserted document (uncomment if needed)
         // const deleteResult = await collection.deleteOne({ _id: insertResult.insertedId });
 
-        return { type: randomChoice }; // Return the random choice as "type".
+        return [{ type: randomChoice }]; // Return the random choice as "type".
     }
 };
