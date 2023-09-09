@@ -59,7 +59,7 @@ name: randomChoice + "memename"
       const randomChoice = Math.random() < 0.5 ? "user" : "post";
       
 if(results != null){
-return [results];
+return results;
 }else{
         return [
             {
