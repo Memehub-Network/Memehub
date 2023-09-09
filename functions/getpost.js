@@ -60,13 +60,13 @@ exports = async function(payload, response) {
        return { error: err.message };
    }
    
-/**
+/*
   return { 
     status: pageNumber, 
     data:results, 
     total_results: pages 
   };
-**/
+*/
    return results;
   
 };
