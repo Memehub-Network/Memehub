@@ -24,9 +24,21 @@ var pageSize = 15;
         const result = await collection.drop();
         return result;
     } else if (action === "create") {
+        const randomChoice = Math.random() < 0.5 ? "user" : "post";
+        if (randomChoice === "post"){
+
         const document = {
-            type: "post"
+            type: randomChoice
         };
+return document;
+}else{
+        const document = {
+            type: randomChoice,
+username: randomChoice + "meme",
+name: randomChoice + "memename"
+        };
+return document;
+}
         const result = await collection.insertOne(document);
         return result;
     } else if (action === "insert") {
@@ -37,12 +49,14 @@ var pageSize = 15;
         const document = {
             type: randomChoice
         };
+return document;
 }else{
         const document = {
             type: randomChoice,
 username: randomChoice + "meme",
 name: randomChoice + "memename"
         };
+return document;
 }
         const insertResult = await collection.insertOne(document);
 
