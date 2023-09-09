@@ -1,38 +1,43 @@
-// This function is the endpoint's request handler.
-exports = function({ query, headers, body}, response) {
-    // Data can be extracted from the request as follows:
+exports = function(payload, response) {
+    var cluster = "mongodb-atlas";
+    var dBase = "memehubclient";
+    var coll = "search_Lab";
 
-    // Query params, e.g. '?arg1=hello&arg2=world' => {arg1: "hello", arg2: "world"}
-    const {arg1, arg2} = query;
+    const collection = context.services.get(cluster).db(dBase).collection(coll);
 
-    // Headers, e.g. {"Content-Type": ["application/json"]}
-    const contentTypes = headers["Content-Type"];
+    const action = payload.query.action;
 
-    // Raw request body (if the client sent one).
-    // This is a binary object that can be accessed as a string using .text()
-    const reqBody = body;
-
-    console.log("arg1, arg2: ", arg1, arg2);
-    console.log("Content-Type:", JSON.stringify(contentTypes));
-    console.log("Request body:", reqBody);
-
-    // You can use 'context' to interact with other application features.
-    // Accessing a value:
-    // var x = context.values.get("value_name");
-
-    // Querying a mongodb service:
-    // const doc = context.services.get("mongodb-atlas").db("dbname").collection("coll_name").findOne();
-
-    // Calling a function:
-    // const result = context.functions.execute("function_name", arg1, arg2);
-
-    // The return value of the function is sent as the response back to the client
-    // when the "Respond with Result" setting is set.
-    //return  "Hello World!";
-    return [
-    {
-        "type": "post"
+    if (action == null) {
+      const randomChoice = Math.random() < 0.5 ? "user" : "post";
+      
+        return [
+            {
+                "type": randomChoice
+            }
+        ];
     }
-];
 
+    if (action === "drop") {
+        const result = await collection.drop();
+        return result;
+    } else if (action === "create") {
+        const document = {
+            type: "post"
+        };
+        const result = await collection.insertOne(document);
+        return result;
+    } else if (action === "insert") {
+        // Randomly choose between "user" and "post"
+        const randomChoice = Math.random() < 0.5 ? "user" : "post";
+        
+        const document = {
+            type: randomChoice
+        };
+        const insertResult = await collection.insertOne(document);
+
+        // Delete the inserted document (uncomment if needed)
+        // const deleteResult = await collection.deleteOne({ _id: insertResult.insertedId });
+
+        return { type: randomChoice }; // Return the random choice as "type".
+    }
 };
