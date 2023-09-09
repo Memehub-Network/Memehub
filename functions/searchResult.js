@@ -14,22 +14,15 @@ exports = async function(payload, response) {
 
     if (action === "drop") {
         return await collection.drop();
-    } else if (action === "create") {
+    } else if (action === "create" || action === "insert") {
         const randomChoice = Math.random() < 0.5 ? "user" : "post";
         const document = {
             type: randomChoice,
-            username: randomChoice + "meme",
-            name: randomChoice + "memename"
         };
-        const insertResult = await collection.insertOne(document);
-        return insertResult;
-    } else if (action === "insert") {
-        const randomChoice = Math.random() < 0.5 ? "user" : "post";
-        const document = {
-            type: randomChoice,
-            username: randomChoice + "meme",
-            name: randomChoice + "memename"
-        };
+        if (randomChoice === "user") {
+            document.username = randomChoice + "meme";
+            document.name = randomChoice + "memename";
+        }
         const insertResult = await collection.insertOne(document);
         return [{ type: randomChoice }];
     } else {
