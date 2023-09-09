@@ -30,16 +30,15 @@ var pageSize = 15;
         const document = {
             type: randomChoice
         };
-return document;
+       const insertResult = await collection.insertOne(document);
 }else{
         const document = {
             type: randomChoice,
 username: randomChoice + "meme",
 name: randomChoice + "memename"
         };
-return document;
+       const insertResult = await collection.insertOne(document);
 }
-        const result = await collection.insertOne(document);
         return result;
     } else if (action === "insert") {
         // Randomly choose between "user" and "post"
@@ -49,16 +48,15 @@ return document;
         const document = {
             type: randomChoice
         };
-return document;
+       const insertResult = await collection.insertOne(document);
 }else{
         const document = {
             type: randomChoice,
 username: randomChoice + "meme",
 name: randomChoice + "memename"
         };
-return document;
+       const insertResult = await collection.insertOne(document);
 }
-        const insertResult = await collection.insertOne(document);
 
         // Delete the inserted document (uncomment if needed)
         // const deleteResult = await collection.deleteOne({ _id: insertResult.insertedId });
