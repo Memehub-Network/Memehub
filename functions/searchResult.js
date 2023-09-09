@@ -1,4 +1,4 @@
-exports = function(payload, response) {
+exports = async function(payload, response) {
     var cluster = "mongodb-atlas";
     var dBase = "memehubclient";
     var coll = "search_Lab";
